@@ -14,29 +14,29 @@ function oneRound(playerSelection,computerSelection) {
         return ["Draw!",null];
     }else if (playerSelection.toLowerCase() == "rock") {
         if (computerSelection == "Paper") {
-            return ["You lose! Paper beats Rock",false];
+            return ["Round lost! Paper beats Rock",false];
         } else {
-
-            return ["You win! Rock beats Scissors",true]; 
+            return ["Round won! Rock beats Scissors",true]; 
         }
     }else if (playerSelection.toLowerCase() == "paper") {
         if (computerSelection == "Rock") {
 
-            return ["You win! Paper beats Rock",true];
+            return ["Round won! Paper beats Rock",true];
         } else {
-            return ["You lose! Scissors beats Paper",false];
+            return ["Round lost! Scissors beats Paper",false];
         }
     }else if (playerSelection.toLowerCase() == "scissors"){
         if (computerSelection == "Rock") {
-            return ["You lose! Rock beats Scissors",false];
+            return ["Round lost! Rock beats Scissors",false];
         } else {
-            return ["You win! Scissors beats Paper",true];
+            return ["Round won! Scissors beats Paper",true];
         }
     }
 }
 function game() {
     let result;
-    let wins = 0; 
+    let wins = 0;
+    let loses = 0;
     for (let i=1; i<6; i++) {
         let userChoice = prompt('What do you choose?');
         result = oneRound(userChoice,computerPlay());
@@ -48,11 +48,17 @@ function game() {
                 break;
             case false:
                 console.log('1 point for the computer')
+                loses++;
                 break;
             case null:
                 console.log('No points')
                 i--;
                 break;
+            }
+        if ((wins==3) && (i>2)) {
+            return "You win!";
+        } else if ((i>2) && (loses==3)){
+            return "You lose!";
         }
     }
 }

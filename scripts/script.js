@@ -8,6 +8,7 @@ function computerPlay() {
         return "Scissors";
     }
 }
+
 function oneRound(playerSelection,computerSelection) {
 
     if (playerSelection.toLowerCase()==computerSelection.toLowerCase()) {
@@ -33,6 +34,7 @@ function oneRound(playerSelection,computerSelection) {
         }
     }
 }
+
 function game() {
     let result;
     let wins = 0;

@@ -39,31 +39,31 @@ function oneRound(playerSelection) {
                     resultText.textContent = 'Draw';
                     break;
                 case 2:
-                    resultText.textContent = 'You lose';
+                    resultText.textContent = 'Round lost';
                     break;
                 default:
-                    resultText.textContent = 'You win';
+                    resultText.textContent = 'Round won';
             }
             break;
         case 2:
             switch (computerSelection) {
                 case 1:
-                    resultText.textContent = 'You win';
+                    resultText.textContent = 'Round won';
                     break;
                 case 2:
                     resultText.textContent = 'Draw';
                     break;
                 default:
-                    resultText.textContent = 'You lose';
+                    resultText.textContent = 'Round lost';
             }
             break;
         default:
             switch (computerSelection) {
                 case 1:
-                    resultText.textContent = 'You lose';
+                    resultText.textContent = 'Round lost';
                     break;
                 case 2:
-                    resultText.textContent = 'You win';
+                    resultText.textContent = 'Round won';
                     break;
                 default:
                     resultText.textContent = 'Draw';
@@ -82,11 +82,11 @@ scissors.addEventListener('click', ()=>{
     oneRound(3);
 });
 
-function nightMode() {
+/*function nightMode() {
     let element = document.body;
     element.classList.toggle('dark-body');
     element.classList.toggle('dark-body');
-  }
+  }*/
 
 //Probabilities check
 /*

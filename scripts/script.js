@@ -7,6 +7,7 @@ const resultText = document.getElementById('result');
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
+const vs = document.getElementById('vs');
 
 // Random 1 to 3 number generator
 function computerPlay () {
@@ -30,6 +31,7 @@ function oneRound(playerSelection) {
     const computerSelection = computerPlay();
     playerText.textContent = ntt(playerSelection);
     computerText.textContent = ntt(computerSelection);
+    vs.textContent = 'vs';
     switch (playerSelection) {
         case 1:
             switch (computerSelection) {
@@ -79,6 +81,12 @@ paper.addEventListener('click', ()=>{
 scissors.addEventListener('click', ()=>{
     oneRound(3);
 });
+
+function nightMode() {
+    let element = document.body;
+    element.classList.toggle('dark-body');
+    element.classList.toggle('dark-body');
+  }
 
 //Probabilities check
 /*

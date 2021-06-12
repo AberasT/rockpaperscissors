@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
     <link href="styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id='play'>NEW GAME</button>
+    <div>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="label"></label>
+    </div>
     <div id='textCont'>
         <p id='player'></p>
+        <p id='vs'></p>
         <p id='computer'></p>
         <p id='result'></p>
     </div>
@@ -16,6 +22,9 @@
         <button id='rock'> <img id='rockImg' src="images/noun_stone_1373886.png" > </button>
         <button id='paper'><img id='paperImg' src="images/noun_Paper_66237.png" ></button>
         <button id='scissors'><img id='scissorsImg' src="images/noun_Scissors_3911744.png" ></button>
+    </div>
+    <div id='menuCont'>
+        <button id='play'>NEW GAME</button>
     </div>
     <script src="./scripts/script.js"></script>
 </body>

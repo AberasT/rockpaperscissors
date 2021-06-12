@@ -1,41 +1,45 @@
 body {
-    background-color: rgb(212, 212, 212);
+    background-color: #101820FF;
 }
 
+p {
+    color: white;
+    font-size: 5vw;
+    font-family: 'Shadows Into Light', cursive;
+}
 
 #textCont {
     position: relative;
-    top: 5vh;
-    display: flex;
-}
-#result {
     margin: auto;
+    width: 50vw;
+    height: 50vh;
+    top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+#vs {
+    grid-column: 2;
 }
 #player {
-    position: relative;
-    left: 30vw;
+    grid-column: 1;
 }
 #computer {
-    position: relative;
-    right: -60vw;
+    grid-column: 3;
+}
+
+#result {
+    grid-row: 2;
+    margin-top: 1vh;
+    grid-column: 1/4;
 }
 
 #elements {
     position: relative;
-    top: 25vh;
+    top: 15vh;
     display: flex;
-}
-
-#player {
-    grid-column: 1;
-}
-
-#result {
-    grid-column: 2;
-}
-
-#computer {
-    grid-column: 3;
 }
 
 #play {
@@ -43,8 +47,6 @@ body {
     width: 10vw;
     height: 8vw;
 }
-
-
 
 #rock {
     position: relative;
@@ -72,12 +74,13 @@ body {
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 50%;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0px 0px 15px rgb(246, 214, 171);
+    background-color: #F2AA4CFF;
 }
 
 #rockImg:hover {
     transform: scale(1.2);
-    box-shadow: 12px 12px 10px grey;
+    box-shadow: 0px 0px 20px rgb(246, 214, 171);
 }
 
 #paperImg {
@@ -88,11 +91,12 @@ body {
     padding-left: 5px;
     border-style: solid;
     border-radius: 50%;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0px 0px 15px rgb(246, 214, 171);
+    background-color: #F2AA4CFF;
 }
 #paperImg:hover {
     transform: scale(1.2);
-    box-shadow: 12px 12px 10px grey;
+    box-shadow: 0px 0px 20px rgb(246, 214, 171);
 }
 
 #scissorsImg {
@@ -103,9 +107,15 @@ body {
     padding-left: 5px;
     border-style: solid;
     border-radius: 50%;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0px 0px 15px rgb(246, 214, 171);
+    background-color: #F2AA4CFF;
 }
 #scissorsImg:hover {
     transform: scale(1.2);
-    box-shadow: 12px 12px 10px grey;
+    box-shadow: 0px 0px 20px rgb(246, 214, 171);
+}
+
+#menuCont {
+    position: relative;
+    margin-top: 20vh;
 }

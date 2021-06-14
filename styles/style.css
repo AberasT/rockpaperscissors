@@ -1,5 +1,5 @@
 body {
-    background-color: #101820FF;
+    background-color: rgb(209, 209, 209);
 }
 
 p {
@@ -8,41 +8,15 @@ p {
     font-family: 'Shadows Into Light', cursive;
 }
 
-/*#checkbox {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    opacity: 0.8;
+#general-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 80vh;
 }
-
-.label {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-}
-
-.nm-img {
-    width: 30px;
-    height: 30px;
-}
-
-#night-mode {
-    width: 30px;
-    height: 30px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-} */
 
 #textCont {
-    position: relative;
-    margin: auto;
-    width: 50vw;
-    height: 50vh;
-    top: 5vh;
+    grid-column: 2/4;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -61,36 +35,52 @@ p {
 
 #result {
     grid-row: 2;
-    margin-top: 1vh;
     grid-column: 1/4;
 }
 
-#elements {
-    position: relative;
-    top: 15vh;
-    display: flex;
+#restart {
+    grid-column: 4/5;
+    grid-row: 1/4;
+
+    background: transparent;
+    border: transparent;
 }
 
-#play {
-    margin: auto;
-    width: 10vw;
-    height: 8vw;
+#restartImg {
+    height: 100px;
+}
+#restartImg:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px rgb(193, 255, 255);
+    color: white;
+    animation-name: rotation;
+    animation-duration: 500ms;
+}
+@keyframes rotation {
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+#elements {
+    grid-column: 1;
+    grid-row: 1/4;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
 }
 
 #rock {
-    position: relative;
-    left: 30vh;
+    grid-row: 1;
     background: transparent;
     border: transparent;
 }
 #paper {
-    margin: auto;
+    grid-row: 2;
     background: transparent;
     border: transparent;
 }
 #scissors {
-    position: relative;
-    right: 30vh;
+    grid-row: 3;
     background: transparent;
     border: transparent;
 }
@@ -103,13 +93,13 @@ p {
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgb(246, 214, 171);
-    background-color: #F2AA4CFF;
+    background-color: rgb(157, 183, 204);
 }
 
 #rockImg:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 20px rgb(246, 214, 171);
+    box-shadow: 0px 0px 20px rgb(193, 255, 255);
+    color: white;
 }
 
 #paperImg {
@@ -120,12 +110,12 @@ p {
     padding-left: 5px;
     border-style: solid;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgb(246, 214, 171);
-    background-color: #F2AA4CFF;
+    background-color: rgb(157, 183, 204);
 }
 #paperImg:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 20px rgb(246, 214, 171);
+    box-shadow: 0px 0px 20px rgb(193, 255, 255);
+    color: white;
 }
 
 #scissorsImg {
@@ -136,12 +126,12 @@ p {
     padding-left: 5px;
     border-style: solid;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgb(246, 214, 171);
-    background-color: #F2AA4CFF;
+    background-color: rgb(157, 183, 204);
 }
 #scissorsImg:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 20px rgb(246, 214, 171);
+    box-shadow: 0px 0px 20px rgb(193, 255, 255);
+    color: white;
 }
 
 #menuCont {

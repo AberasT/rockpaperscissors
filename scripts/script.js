@@ -2,12 +2,16 @@
 
 const play = document.getElementById('play');
 const playerText = document.getElementById('player');
+playerText.style.color = 'black';
 const computerText = document.getElementById('computer');
+computerText.style.color = 'black';
 const resultText = document.getElementById('result');
+resultText.style.color = 'black';
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const vs = document.getElementById('vs');
+vs.style.color = 'black';
 
 // Random 1 to 3 number generator
 function computerPlay () {

@@ -50,15 +50,13 @@ p {
     height: 100px;
 }
 #restartImg:hover{
-    transform: scale(1.2);
-    box-shadow: 0px 0px 20px rgb(193, 255, 255);
-    color: white;
     animation-name: rotation;
-    animation-duration: 500ms;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
 }
 @keyframes rotation {
     100% {
-        transform: rotate(359deg);
+        transform: rotate(-360deg);
     }
 }
 

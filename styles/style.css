@@ -12,36 +12,67 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 80vh;
 }
 
 #textCont {
     grid-column: 2/4;
+    grid-row: 1/4;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
     justify-items: center;
     align-items: center;
 }
-#vs {
-    grid-column: 2;
-}
 #player {
     grid-column: 1;
+    grid-row: 1;
 }
-#computer {
+
+#you {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#to {
+    grid-row: 4;
+    grid-column: 2;
+    color: grey;
+}
+
+#pCounter {
+    grid-row: 4;
+    grid-column: 1;
+    color: black;
+}
+#cCounter {
+    grid-row: 4;
+    grid-column: 3;
+    color: black;
+}
+
+#pc {
+    grid-row: 2;
     grid-column: 3;
 }
 
+#vs {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#computer {
+    grid-column: 3;
+    grid-row: 1;
+}
+
 #result {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 1/4;
 }
 
 #restart {
     grid-column: 4/5;
     grid-row: 1/4;
-
     background: transparent;
     border: transparent;
 }
@@ -62,7 +93,7 @@ p {
 
 #elements {
     grid-column: 1;
-    grid-row: 1/4;
+    grid-row: 1/5;
     display: grid;
     grid-template-rows: repeat(3,1fr);
 }
@@ -95,10 +126,13 @@ p {
 }
 
 #rockImg:hover {
-    transform: scale(1.2);
     box-shadow: 0px 0px 20px rgb(193, 255, 255);
     color: white;
+    animation-name: scale;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
 }
+
 
 #paperImg {
     width: 100px;
@@ -111,9 +145,11 @@ p {
     background-color: rgb(157, 183, 204);
 }
 #paperImg:hover {
-    transform: scale(1.2);
     box-shadow: 0px 0px 20px rgb(193, 255, 255);
     color: white;
+    animation-name: scale;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
 }
 
 #scissorsImg {
@@ -127,9 +163,17 @@ p {
     background-color: rgb(157, 183, 204);
 }
 #scissorsImg:hover {
-    transform: scale(1.2);
     box-shadow: 0px 0px 20px rgb(193, 255, 255);
     color: white;
+    animation-name: scale;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.15);
+    }
 }
 
 #menuCont {

@@ -1,10 +1,21 @@
-//let ones ,twos ,threes; // For the probabilities module
+let pPoints = 0;
+let cPoints = 0;
+let pCounter = document.getElementById('pCounter');
+pCounter.textContent = pPoints;
+let cCounter = document.getElementById('cCounter');
+cCounter.textContent = cPoints;
+
+
 
 const play = document.getElementById('play');
 const playerText = document.getElementById('player');
 playerText.style.color = 'black';
+const youText = document.getElementById('you');
+youText.style.color = 'grey';
 const computerText = document.getElementById('computer');
 computerText.style.color = 'black';
+const pcText = document.getElementById('pc');
+pcText.style.color = 'grey';
 const resultText = document.getElementById('result');
 resultText.style.color = 'black';
 const rock = document.getElementById('rock');
@@ -34,7 +45,9 @@ function ntt(num) {
 function oneRound(playerSelection) {
     const computerSelection = computerPlay();
     playerText.textContent = ntt(playerSelection);
+    youText.textContent = '(You)';
     computerText.textContent = ntt(computerSelection);
+    pcText.textContent = '(PC)';
     vs.textContent = 'vs';
     switch (playerSelection) {
         case 1:
@@ -44,30 +57,42 @@ function oneRound(playerSelection) {
                     break;
                 case 2:
                     resultText.textContent = 'Round lost';
+                    cPoints += 1;
+                    cCounter.textContent = cPoints;
                     break;
                 default:
                     resultText.textContent = 'Round won';
+                    pPoints += 1;
+                    pCounter.textContent = pPoints;
             }
             break;
         case 2:
             switch (computerSelection) {
                 case 1:
                     resultText.textContent = 'Round won';
+                    pPoints += 1;
+                    pCounter.textContent = pPoints;
                     break;
                 case 2:
                     resultText.textContent = 'Draw';
                     break;
                 default:
                     resultText.textContent = 'Round lost';
+                    cPoints += 1;
+                    cCounter.textContent = cPoints;
             }
             break;
         default:
             switch (computerSelection) {
                 case 1:
                     resultText.textContent = 'Round lost';
+                    cPoints += 1;
+                    cCounter.textContent = cPoints;
                     break;
                 case 2:
                     resultText.textContent = 'Round won';
+                    pPoints += 1;
+                    pCounter.textContent = pPoints;
                     break;
                 default:
                     resultText.textContent = 'Draw';
@@ -85,37 +110,3 @@ paper.addEventListener('click', ()=>{
 scissors.addEventListener('click', ()=>{
     oneRound(3);
 });
-
-/*function nightMode() {
-    let element = document.body;
-    element.classList.toggle('dark-body');
-    element.classList.toggle('dark-body');
-  }*/
-
-//Probabilities check
-/*
-
-rock.addEventListener('click', ()=>{
-    ones = 0;
-    twos = 0;
-    threes = 0;
-    for (let i = 0; i<1000; i++) {
-        let num = oneRound(1);
-        switch (num) {
-            case 1:
-                ones++
-                break;
-            case 2:
-                twos++;
-                break;
-            default:
-                threes++;
-        }
-    }
-    console.log('Ones: ',ones);
-    console.log((ones/1000)*100,'%');
-    console.log('Twos: ',twos);
-    console.log((twos/1000)*100,'%');
-    console.log('Threes: ',threes);
-    console.log((threes/1000)*100,'%');
-})*/

@@ -23,6 +23,7 @@ const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const vs = document.getElementById('vs');
 vs.style.color = 'black';
+const restart = document.getElementById('restart');
 
 // Random 1 to 3 number generator
 function computerPlay () {
@@ -38,6 +39,15 @@ function ntt(num) {
             return 'Paper';
         default:
             return 'Scissors';
+    }
+}
+
+function check() {
+    if (pPoints == 5) {
+        resultText.textContent = 'You won the match!';
+    }
+    else if (cPoints == 5) {
+        resultText.textContent = 'You lost the match!';
     }
 }
 
@@ -59,11 +69,13 @@ function oneRound(playerSelection) {
                     resultText.textContent = 'Round lost';
                     cPoints += 1;
                     cCounter.textContent = cPoints;
+                    check();
                     break;
                 default:
                     resultText.textContent = 'Round won';
                     pPoints += 1;
                     pCounter.textContent = pPoints;
+                    check();
             }
             break;
         case 2:
@@ -72,6 +84,7 @@ function oneRound(playerSelection) {
                     resultText.textContent = 'Round won';
                     pPoints += 1;
                     pCounter.textContent = pPoints;
+                    check();
                     break;
                 case 2:
                     resultText.textContent = 'Draw';
@@ -80,6 +93,7 @@ function oneRound(playerSelection) {
                     resultText.textContent = 'Round lost';
                     cPoints += 1;
                     cCounter.textContent = cPoints;
+                    check();
             }
             break;
         default:
@@ -88,11 +102,13 @@ function oneRound(playerSelection) {
                     resultText.textContent = 'Round lost';
                     cPoints += 1;
                     cCounter.textContent = cPoints;
+                    check();
                     break;
                 case 2:
                     resultText.textContent = 'Round won';
                     pPoints += 1;
                     pCounter.textContent = pPoints;
+                    check();
                     break;
                 default:
                     resultText.textContent = 'Draw';
@@ -102,11 +118,29 @@ function oneRound(playerSelection) {
 
 // Buttons eventListeners 
 rock.addEventListener('click', ()=>{
-    oneRound(1);
+    if ((pPoints != 5) && (cPoints != 5)) {
+        oneRound(1);
+    }
 });
 paper.addEventListener('click', ()=>{
-    oneRound(2);
+    if ((pPoints != 5) && (cPoints != 5)) {
+        oneRound(2);
+    }
 });
 scissors.addEventListener('click', ()=>{
-    oneRound(3);
+    if ((pPoints != 5) && (cPoints != 5)) {
+        oneRound(3);
+    }
 });
+restart.addEventListener('click', ()=>{
+    pPoints = 0;
+    cPoints = 0;
+    cCounter.textContent = cPoints;
+    pCounter.textContent = pPoints;
+    resultText.textContent = '';
+    playerText.textContent = '';
+    computerText.textContent = '';
+    vs.textContent = '';
+    youText.textContent = '';
+    pcText.textContent = '';
+})

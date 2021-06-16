@@ -12,6 +12,9 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    column-gap: 100px;
+    justify-items: stretch;
+    align-items: center;
 }
 
 #textCont {
@@ -21,7 +24,7 @@ p {
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
     justify-items: center;
-    align-items: center;
+    align-content: start;
 }
 #player {
     grid-column: 1;
@@ -71,6 +74,8 @@ p {
 }
 
 #restart {
+    width: 100px;
+    height: 100px;
     grid-column: 4/5;
     grid-row: 1/4;
     background: transparent;
@@ -96,19 +101,28 @@ p {
     grid-row: 1/5;
     display: grid;
     grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 100px;
 }
 
 #rock {
+    width: 100px;
+    height: 100px;
     grid-row: 1;
     background: transparent;
     border: transparent;
 }
 #paper {
+    width: 100px;
+    height: 100px;
     grid-row: 2;
     background: transparent;
     border: transparent;
 }
 #scissors {
+    width: 100px;
+    height: 100px;
     grid-row: 3;
     background: transparent;
     border: transparent;

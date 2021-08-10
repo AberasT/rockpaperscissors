@@ -9,10 +9,11 @@ p {
 }
 
 #general-container {
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 100px;
+    column-gap: 8vw;
     justify-items: stretch;
     align-items: center;
 }
@@ -20,6 +21,7 @@ p {
 #textCont {
     grid-column: 2/4;
     grid-row: 1/4;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
@@ -28,62 +30,79 @@ p {
 }
 #player {
     grid-column: 1;
+    margin: 0;
     grid-row: 1;
 }
 
 #you {
     grid-row: 2;
+    margin: 0;
     grid-column: 1;
 }
 
 #to {
     grid-row: 4;
+    margin: 0;
     grid-column: 2;
     color: grey;
 }
 
 #pCounter {
     grid-row: 4;
+    margin: 0;
     grid-column: 1;
     color: black;
 }
 #cCounter {
     grid-row: 4;
+    margin: 0;
     grid-column: 3;
     color: black;
 }
 
 #pc {
     grid-row: 2;
+    margin: 0;
     grid-column: 3;
 }
 
 #vs {
     grid-row: 1;
+    margin: 0;
     grid-column: 2;
 }
 
 #computer {
     grid-column: 3;
+    margin: 0;
     grid-row: 1;
 }
 
 #result {
     grid-row: 3;
+    margin: 0;
+    margin-top: 2vw;
     grid-column: 1/4;
 }
 
 #restart {
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
     grid-column: 4/5;
     grid-row: 1/4;
     background: transparent;
     border: transparent;
 }
 
+#restart-text {
+    font-size: 3vw;
+    margin-bottom: 0;
+    color: black;
+}
+
+
 #restartImg {
-    height: 100px;
+    height: 8vw;
 }
 #restartImg:hover{
     animation-name: rotation;
@@ -103,34 +122,34 @@ p {
     grid-template-rows: repeat(3,1fr);
     justify-items: center;
     align-items: center;
-    row-gap: 100px;
+    row-gap: 5vw;
 }
 
 #rock {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     grid-row: 1;
     background: transparent;
     border: transparent;
 }
 #paper {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     grid-row: 2;
     background: transparent;
     border: transparent;
 }
 #scissors {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     grid-row: 3;
     background: transparent;
     border: transparent;
 }
 
 #rockImg {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     border-style: solid;
     padding-top: 10px;
     padding-right: 5px;
@@ -149,8 +168,8 @@ p {
 
 
 #paperImg {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     padding-top: 10px;
     padding-right: 5px;
     padding-left: 5px;
@@ -167,8 +186,8 @@ p {
 }
 
 #scissorsImg {
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     padding-top: 10px;
     padding-right: 5px;
     padding-left: 5px;

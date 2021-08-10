@@ -37,12 +37,14 @@ p {
 #you {
     grid-row: 2;
     margin: 0;
+    margin-bottom: 2vh;
     grid-column: 1;
 }
 
 #to {
     grid-row: 4;
     margin: 0;
+    padding-top: 2vw;
     grid-column: 2;
     color: grey;
 }
@@ -50,11 +52,13 @@ p {
 #pCounter {
     grid-row: 4;
     margin: 0;
+    padding-top: 2vw;
     grid-column: 1;
     color: black;
 }
 #cCounter {
     grid-row: 4;
+    padding-top: 2vw;
     margin: 0;
     grid-column: 3;
     color: black;
@@ -63,6 +67,7 @@ p {
 #pc {
     grid-row: 2;
     margin: 0;
+    margin-bottom: 2vh;
     grid-column: 3;
 }
 
@@ -81,7 +86,6 @@ p {
 #result {
     grid-row: 3;
     margin: 0;
-    margin-top: 2vw;
     grid-column: 1/4;
 }
 
@@ -100,10 +104,10 @@ p {
     color: black;
 }
 
-
 #restartImg {
     height: 8vw;
 }
+
 #restartImg:hover{
     animation-name: rotation;
     animation-duration: 300ms;
@@ -120,7 +124,7 @@ p {
     grid-row: 1/5;
     display: grid;
     grid-template-rows: repeat(3,1fr);
-    justify-items: center;
+    justify-self: center;
     align-items: center;
     row-gap: 5vw;
 }
@@ -212,4 +216,73 @@ p {
 #menuCont {
     position: relative;
     margin-top: 20vh;
+}
+
+@media screen and (max-aspect-ratio: 12/10)  {
+    body {
+        color: rgb(255, 0, 0);
+        font-size: 5vw;
+    }
+    #general-container {
+        height: 80vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "textCont-area"
+                             "elements-area"
+                             "restart-area";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+        justify-self: center;
+        align-self: center;
+    }
+    #textCont {
+        grid-area: textCont-area;
+        margin: 0;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        justify-items: center;
+        align-content: center;
+    }
+    #elements {
+        grid-area: elements-area;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #scissors {
+        grid-area: scissors-area;
+        margin: 0;
+        margin-right: 2.8vw;
+    }
+    #scissorsImg {
+        margin: 0;
+    }
+    #rock {
+        grid-area: rock-area;
+        margin: 0;
+    }
+    #rockImg {
+        margin: 0;
+    }
+    #paper {
+        grid-area: paper-area;
+        margin: 0;
+    }
+    #paperImg {
+        margin: 0;
+    }
+    #restart {
+        width: 10vw;
+        margin: auto;
+        height: 10vw;
+        grid-area: restart-area;
+        background: transparent;
+        border: transparent;
+    }
+    #restartImg {
+        height: 10vw;
+    }
 }

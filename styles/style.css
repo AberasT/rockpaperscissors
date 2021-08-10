@@ -219,10 +219,6 @@ p {
 }
 
 @media screen and (max-aspect-ratio: 12/10)  {
-    body {
-        color: rgb(255, 0, 0);
-        font-size: 5vw;
-    }
     #general-container {
         height: 80vh;
         width: 100%;

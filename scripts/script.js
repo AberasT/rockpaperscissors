@@ -6,7 +6,6 @@ let cCounter = document.getElementById('cCounter');
 cCounter.textContent = cPoints;
 
 
-
 const play = document.getElementById('play');
 const playerText = document.getElementById('player');
 
